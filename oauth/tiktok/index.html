@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Connecting TikTok — Squidpost</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <main class="wrap doc" style="text-align:center;padding-top:96px">
+    <img src="../../assets/squidpost-mark.svg" alt="" width="72" height="72">
+    <h1 style="font-size:28px">Connecting your TikTok account…</h1>
+    <p class="updated">You will be sent back to Squidpost in a moment.</p>
+  </main>
+  <script>
+    // Dev bridge: TikTok does not accept localhost redirect URIs, so it redirects here
+    // and this page forwards the OAuth query (code, state, error) to the local app.
+    var target = "http://localhost:3000/api/connect/tiktok/callback";
+    location.replace(target + location.search);
+  </script>
+</body>
+</html>
